@@ -1,5 +1,5 @@
 import React from "react";
-
+import image from "../assets/newss.jpeg";
 const Cards = ({ urlToImage, title, url, description }) => {
   return (
     <>
@@ -8,7 +8,11 @@ const Cards = ({ urlToImage, title, url, description }) => {
           className="card col my-3 mx-3 px-2 py-2 bg-dark text-light d-inline-block"
           style={{ width: "18rem" }}
         >
-          <img src={urlToImage} className="card-img-top" alt="..." />
+          <img
+            src={urlToImage ? urlToImage : image}
+            className="card-img-top"
+            alt="..."
+          />
           <div className="card-body ">
             <h5 className="card-title">{title.slice(0, 50)}</h5>
             <p className="card-text">
