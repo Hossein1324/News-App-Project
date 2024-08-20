@@ -9,6 +9,7 @@ const Cards = ({ urlToImage, title, url, description }) => {
           style={{ width: "18rem" }}
         >
           <img
+            style={{ height: "230xp" }}
             src={urlToImage ? urlToImage : image}
             className="card-img-top"
             alt="..."
@@ -17,7 +18,7 @@ const Cards = ({ urlToImage, title, url, description }) => {
             <h5 className="card-title">{title.slice(0, 50)}</h5>
             <p className="card-text">
               {description
-                ? description.slice(0.9)
+                ? description.slice(0, 90)
                 : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui dicta voluptatem eos, unde libero quia officia at."}
             </p>
 

@@ -24,14 +24,15 @@ const TopNews = () => {
 
       <div className="container text-center ">
         <div className="row row-cols-3-sm">
-          {news.map((ne) => (
+          {/* {news.map((ne) => (
             <Cards
               key={ne.id}
               urlToImage={ne.urlToImage}
               url={ne.url}
               title={ne.title}
+              description={ne.description}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </>
