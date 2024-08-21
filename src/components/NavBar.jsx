@@ -1,12 +1,18 @@
 import React from "react";
-
-const NavBar = ({ setCategory }) => {
+import { IoNewspaper } from "react-icons/io5";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+const NavBar = ({ setCategory, toggleTheme, darkMode }) => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiar bg-dark navbar-dark">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
+      <nav className="navbar navbar-expand-lg bg-body-tertiar">
+        <div className="container-fluid d-flex">
+          <a className="navbar-brand p-2 flex-fill" href="#">
+            {darkMode ? (
+              <IoNewspaper size={45} color="black" />
+            ) : (
+              <IoNewspaper size={45} color="white" />
+            )}
           </a>
           <button
             className="navbar-toggler"
@@ -20,8 +26,8 @@ const NavBar = ({ setCategory }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
+            <ul className="navbar-nav fs-5  flex-fill">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -30,7 +36,7 @@ const NavBar = ({ setCategory }) => {
                   World
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -39,7 +45,7 @@ const NavBar = ({ setCategory }) => {
                   General
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -48,7 +54,7 @@ const NavBar = ({ setCategory }) => {
                   Technology
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -58,7 +64,7 @@ const NavBar = ({ setCategory }) => {
                 </div>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -67,7 +73,7 @@ const NavBar = ({ setCategory }) => {
                   Sports
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -76,7 +82,7 @@ const NavBar = ({ setCategory }) => {
                   Science
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -86,7 +92,7 @@ const NavBar = ({ setCategory }) => {
                 </div>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
                   role="button"
@@ -96,6 +102,19 @@ const NavBar = ({ setCategory }) => {
                 </div>
               </li>
             </ul>
+            <div className=" flex-fill">
+              <button
+                className="border-0 rounded-3 px-5 py-2"
+                variant="primary"
+                onClick={toggleTheme}
+              >
+                {darkMode ? (
+                  <MdLightMode size={20} />
+                ) : (
+                  <MdDarkMode size={20} />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </nav>

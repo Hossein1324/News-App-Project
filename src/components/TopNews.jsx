@@ -32,7 +32,7 @@ const TopNews = ({ category }) => {
 
       <div className="container text-center ">
         <div className="row row-cols-3-sm">
-          {error && <p className="text-dark fs-2">{error}</p>}
+          {error && <p className="fs-2">{error}</p>}
           {loading && (
             <div className="d-flex justify-content-center mt-3">
               <div
@@ -44,7 +44,7 @@ const TopNews = ({ category }) => {
               </div>
             </div>
           )}
-          {news.map((ne) => (
+          {/* {news.map((ne) => (
             <Cards
               image={ne.image}
               url={ne.url}
@@ -52,7 +52,7 @@ const TopNews = ({ category }) => {
               description={ne.description}
               publishedAt={ne.publishedAt}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </>
