@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 
-const TopNews = () => {
+const TopNews = ({ category }) => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -11,7 +11,7 @@ const TopNews = () => {
     setLoading(true);
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=apple&from=2024-08-17&to=2024-08-17&sortBy=popularity&apiKey=${
+        ` https://gnews.io/api/v4/top-headlines?category=${category}&country=us&apikey=${
           import.meta.env.VITE_API_KEY
         }`
       )
@@ -23,7 +23,7 @@ const TopNews = () => {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [category]);
   return (
     <>
       {/* {news.map((ne) => (
@@ -36,7 +36,7 @@ const TopNews = () => {
           {loading && (
             <div className="d-flex justify-content-center mt-3">
               <div
-                className="spinner-grow"
+                className="spinner-grow mt-1"
                 style={{ width: "3rem", height: "3rem" }}
                 role="status"
               >
@@ -46,11 +46,11 @@ const TopNews = () => {
           )}
           {news.map((ne) => (
             <Cards
-              key={ne.id}
-              urlToImage={ne.urlToImage}
+              image={ne.image}
               url={ne.url}
               title={ne.title}
               description={ne.description}
+              publishedAt={ne.publishedAt}
             />
           ))}
         </div>

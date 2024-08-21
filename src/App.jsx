@@ -7,10 +7,11 @@ import News from "./components/TopNews";
 import TopNews from "./components/TopNews";
 
 function App() {
+  const [category, setCategory] = useState("general");
   return (
     <>
-      <NavBar />
-      <TopNews />
+      <NavBar setCategory={setCategory} />
+      <TopNews category={category} />
     </>
   );
 }

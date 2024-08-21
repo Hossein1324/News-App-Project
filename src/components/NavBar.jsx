@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ setCategory }) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiar bg-dark navbar-dark">
@@ -22,19 +22,78 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <div className="nav-link">Technology</div>
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("world")}
+                >
+                  World
+                </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link">Business</div>
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("general")}
+                >
+                  General
+                </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link">Features</div>
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("technology")}
+                >
+                  Technology
+                </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link">Features</div>
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("business")}
+                >
+                  Business
+                </div>
+              </li>
+
+              <li className="nav-item">
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("sports")}
+                >
+                  Sports
+                </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link">Features</div>
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("science")}
+                >
+                  Science
+                </div>
+              </li>
+              <li className="nav-item">
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("health")}
+                >
+                  Health
+                </div>
+              </li>
+
+              <li className="nav-item">
+                <div
+                  className="nav-link"
+                  role="button"
+                  onClick={() => setCategory("entertainment")}
+                >
+                  Entertainment
+                </div>
               </li>
             </ul>
           </div>
