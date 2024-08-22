@@ -1,0 +1,19 @@
+.nav-link{
+    position: relative;
+}
+.nav-link:hover::after{
+content: '';
+transition: all 0.2s; 
+height: 2px;
+width: 100px;
+background-color: greenyellow;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+.card{
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.10);
+}

@@ -26,6 +26,9 @@ const TopNews = ({ category }) => {
   }, [category]);
   return (
     <>
+      <h2 className="text-center mt-3">
+        Latest <span className="badge bg-danger">News</span>
+      </h2>
       {/* {news.map((ne) => (
         <p>{ne.title}</p>
       ))} */}
@@ -44,7 +47,7 @@ const TopNews = ({ category }) => {
               </div>
             </div>
           )}
-          {/* {news.map((ne) => (
+          {news.map((ne) => (
             <Cards
               image={ne.image}
               url={ne.url}
@@ -52,7 +55,7 @@ const TopNews = ({ category }) => {
               description={ne.description}
               publishedAt={ne.publishedAt}
             />
-          ))} */}
+          ))}
         </div>
       </div>
     </>

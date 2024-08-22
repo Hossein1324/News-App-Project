@@ -7,13 +7,26 @@ const NavBar = ({ setCategory, toggleTheme, darkMode }) => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiar">
         <div className="container-fluid d-flex">
-          <a className="navbar-brand p-2 flex-fill" href="#">
+          <div className=" flex-fill">
             {darkMode ? (
-              <IoNewspaper size={45} color="black" />
+              <button
+                className="btn btn-dark rounded-3 px-5 py-2"
+                variant="primary"
+                onClick={toggleTheme}
+              >
+                <MdLightMode size={25} />
+              </button>
             ) : (
-              <IoNewspaper size={45} color="white" />
+              <button
+                className="btn btn-primary rounded-3 px-5 py-2"
+                variant="primary"
+                onClick={toggleTheme}
+              >
+                <MdDarkMode size={25} />
+              </button>
             )}
-          </a>
+          </div>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -26,7 +39,7 @@ const NavBar = ({ setCategory, toggleTheme, darkMode }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav fs-5  flex-fill">
+            <ul className="navbar-nav fs-4  flex-fill">
               <li className="nav-item mx-3 px-1">
                 <div
                   className="nav-link"
@@ -102,19 +115,6 @@ const NavBar = ({ setCategory, toggleTheme, darkMode }) => {
                 </div>
               </li>
             </ul>
-            <div className=" flex-fill">
-              <button
-                className="border-0 rounded-3 px-5 py-2"
-                variant="primary"
-                onClick={toggleTheme}
-              >
-                {darkMode ? (
-                  <MdLightMode size={20} />
-                ) : (
-                  <MdDarkMode size={20} />
-                )}
-              </button>
-            </div>
           </div>
         </div>
       </nav>

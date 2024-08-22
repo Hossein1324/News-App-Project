@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import imagee from "../assets/newss.jpeg";
 
 const Cards = ({ image, title, url, description, publishedAt }) => {
   return (
@@ -13,7 +14,7 @@ const Cards = ({ image, title, url, description, publishedAt }) => {
             <img
               style={{ height: "230xp" }}
               src={image ? image : imagee}
-              className="card-img-top"
+              className="card-img-top hover-zoom"
               alt="..."
             />
           </div>
