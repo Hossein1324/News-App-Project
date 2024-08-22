@@ -11,7 +11,7 @@ const TopNews = ({ category, darkMode }) => {
     setLoading(true);
     axios
       .get(
-        ` https://gnews.io/api/v4/top-headlines?category=${category}&country=au&apikey=${
+        ` https://gnews.io/api/v4/top-headlines?category=${category}&country=us&apikey=${
           import.meta.env.VITE_API_KEY
         }`
       )
@@ -35,8 +35,8 @@ const TopNews = ({ category, darkMode }) => {
           Latest <span className="badge bg-warning">News</span>
         </h2>
       )}
-      {/* {news.map((ne) => (
-        <p>{ne.title}</p>
+      {/* {news.map((e) => (
+        <p>{e.title}</p>
       ))} */}
 
       <div className="container text-center ">
@@ -53,13 +53,13 @@ const TopNews = ({ category, darkMode }) => {
               </div>
             </div>
           )}
-          {news.map((ne) => (
+          {news.map((e) => (
             <Cards
-              image={ne.image}
-              url={ne.url}
-              title={ne.title}
-              description={ne.description}
-              publishedAt={ne.publishedAt}
+              image={e.image}
+              url={e.url}
+              title={e.title}
+              description={e.description}
+              publishedAt={e.publishedAt}
             />
           ))}
         </div>

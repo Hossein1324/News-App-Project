@@ -7,7 +7,7 @@ import News from "./components/TopNews";
 import TopNews from "./components/TopNews";
 
 function App() {
-  const [category, setCategory] = useState("general");
+  const [category, setCategory] = useState("world");
   const [darkMode, setDarkMode] = useState(false);
   const toggleTheme = () => {
     setDarkMode(!darkMode);

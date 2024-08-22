@@ -1,8 +1,19 @@
-# React + Vite
+<h1>News Website Project! </h1>
+<p>Hi!, This is a Real World Project Building By React!.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1>The Chalanges:</h1>
+- Get api key and use it in project by axios.
+-Show loading and bugs about api key and style to it with bootstrap.
+-Learn how to filter the news in react.
+- Build dark mode with bootstrap and som custom styles.
+- Build Responsive web design website.
 
-Currently, two official plugins are available:
+<h1>Skills Used: </h1>
+- React
+- Javascript
+- Bootstrap
+-Css
+-Html
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1>How To See The Project:</h1>
+<p>I deployed the project by netlify so you can see the project by clicking the link on the below!</p>
