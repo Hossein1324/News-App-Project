@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 
-const TopNews = ({ category }) => {
+const TopNews = ({ category, darkMode }) => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -11,7 +11,7 @@ const TopNews = ({ category }) => {
     setLoading(true);
     axios
       .get(
-        ` https://gnews.io/api/v4/top-headlines?category=${category}&country=us&apikey=${
+        ` https://gnews.io/api/v4/top-headlines?category=${category}&country=au&apikey=${
           import.meta.env.VITE_API_KEY
         }`
       )
@@ -26,9 +26,15 @@ const TopNews = ({ category }) => {
   }, [category]);
   return (
     <>
-      <h2 className="text-center mt-3">
-        Latest <span className="badge bg-danger">News</span>
-      </h2>
+      {darkMode ? (
+        <h2 className="text-center text-dark mt-3">
+          Latest <span className="badge bg-danger">News</span>
+        </h2>
+      ) : (
+        <h2 className="text-center text-info mt-3">
+          Latest <span className="badge bg-warning">News</span>
+        </h2>
+      )}
       {/* {news.map((ne) => (
         <p>{ne.title}</p>
       ))} */}

@@ -21,7 +21,7 @@ function App() {
         toggleTheme={toggleTheme}
         darkMode={darkMode}
       />
-      <TopNews category={category} />
+      <TopNews category={category} darkMode={darkMode} />
     </>
   );
 }

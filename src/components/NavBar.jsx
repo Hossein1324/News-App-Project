@@ -10,7 +10,7 @@ const NavBar = ({ setCategory, toggleTheme, darkMode }) => {
           <div className=" flex-fill">
             {darkMode ? (
               <button
-                className="btn btn-dark rounded-3 px-5 py-2"
+                className="btn btn-warning rounded-3 px-5 py-2"
                 variant="primary"
                 onClick={toggleTheme}
               >
