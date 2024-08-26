@@ -2,11 +2,11 @@
 <p>Hi!, This is a Real World Project Building By React!.</p>
 
 <h1>The Chalanges:</h1>
-- Get api key and use it in project by axios.
--Show loading and bugs about api key and style to it with bootstrap.
--Learn how to filter the news in react.
-- Build dark mode with bootstrap and som custom styles.
-- Build Responsive web design website.
+<li>Get api key and use it in project by axios.</li>
+<li>Show loading and bugs about api key and style to it with bootstrap.</li>
+<li>Learn how to filter the news in react.</li>
+<li> Build dark mode with bootstrap and som custom styles.</li>
+<li> Build Responsive web design website.</li>
 
 <h1>Skills Used: </h1>
 - React
