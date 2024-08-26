@@ -35,9 +35,7 @@ const TopNews = ({ category, darkMode }) => {
           Latest <span className="badge bg-warning">News</span>
         </h2>
       )}
-      {/* {news.map((e) => (
-        <p>{e.title}</p>
-      ))} */}
+     
 
       <div className="container text-center ">
         <div className="row row-cols-3-sm">
@@ -53,13 +51,13 @@ const TopNews = ({ category, darkMode }) => {
               </div>
             </div>
           )}
-          {news.map((e) => (
+          {news.map((ne) => (
             <Cards
-              image={e.image}
-              url={e.url}
-              title={e.title}
-              description={e.description}
-              publishedAt={e.publishedAt}
+              image={ne.image}
+              url={ne.url}
+              title={ne.title}
+              description={ne.description}
+              publishedAt={ne.publishedAt}
             />
           ))}
         </div>
