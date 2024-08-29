@@ -17,4 +17,4 @@
 
 <h1>How To See The Project:</h1>
 <p>I deployed the project by netlify so you can see the project by clicking the link on the below!</p>
-[News-APP-Project](https://news-appreact.netlify.app)
+[News-APP-Project](https://newsappprojectt.netlify.app)
